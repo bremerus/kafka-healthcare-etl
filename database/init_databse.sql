@@ -31,7 +31,7 @@ create table patient_info(
 	booking_date		date,
 	doctor_name			nvarchar(100),
 	department			nvarchar(50),
-	currency			nvarchar(10),
-	billing_amount		decimal(10, 2),
+	currency_init			nvarchar(10),
+	billing_amount_in_eur		decimal(10, 2),
 	follow_up_required	bit
 );
