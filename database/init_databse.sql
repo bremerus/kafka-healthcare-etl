@@ -1,0 +1,11 @@
+use master
+go
+
+IF EXISTS (SELECT 1 FROM sys.databases WHERE name = 'HealthcareETL')
+BEGIN
+    ALTER DATABASE HealthcareETL SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
+    DROP DATABASE HealthcareETL;
+END;
+GO
+
+CREATE DATABASE HealthcareETL;
